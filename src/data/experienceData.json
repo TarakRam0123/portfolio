@@ -1,0 +1,28 @@
+[
+    {
+        "title": "React.js Developer",
+        "company": "Abilio IT Solutions",
+        "companyUrl": "https://abilioit.com/",
+        "duration": "April 2024 - Present",
+        "chipColor": "primary",
+        "responsibilities": [
+            "Designed and maintained responsive web applications ensuring high performance and user engagement.",
+            "Developed applications using React.js 18, HTML5, CSS3, Bootstrap, and Material UI.",
+            "Integrated REST APIs using Fetch and Axios with proper error handling.",
+            "Optimized component re-renders and minimized memory leaks in React applications."
+        ]
+    },
+    {
+        "title": "Full Stack Developer",
+        "company": "RR SoftSol Pvt. Ltd.",
+        "companyUrl": "https://rrsoftsol.in/",
+        "duration": "July 2022 - March 2024",
+        "chipColor": "secondary",
+        "responsibilities": [
+            "Integrated REST APIs and managed end-to-end data flow between frontend and backend systems.",
+            "Implemented role-based authentication and authorization using JWT.",
+            "Collaborated with UI/UX designers to ensure pixel-perfect, responsive user interfaces.",
+            "Wrote reusable and modular components in React.js to improve code maintainability."
+        ]
+    }
+]

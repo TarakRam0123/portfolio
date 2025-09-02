@@ -1,0 +1,33 @@
+export const skills = {
+    Frontend: [
+        "React.js",
+        "Redux",
+        "JavaScript",
+        "HTML5",
+        "CSS3",
+        "Bootstrap",
+        "Material-UI",
+        "Angular",
+        "TypeScript",
+    ],
+    Backend: [
+        "Express.js",
+        "Java",
+        "Spring Boot",
+        "Node.js",
+        "REST APIs",
+        "JDBC",
+        "Hibernate",
+    ],
+    Databases: ["MySQL", "MongoDB"],
+    Tools: [
+        "Git",
+        "GitHub",
+        "IntelliJ IDEA",
+        "VS Code",
+        "Maven",
+        "Postman",
+        "AWS S3",
+        "Swagger",
+    ],
+};
