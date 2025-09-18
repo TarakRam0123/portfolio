@@ -84,7 +84,7 @@ const Contact = () => {
 
       <Box component="form" onSubmit={handleSubmit}>
         <TextField
-          label="Name"
+          label="Your Name"
           name="user_name"
           value={formData.user_name}
           onChange={handleChange}
