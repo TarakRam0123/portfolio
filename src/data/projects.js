@@ -1,32 +1,32 @@
 export const projects = [
-    {
-        title: "Indian Book House",
-        tech: ["React.js", "Node.js", "MySQL", "Cloudinary", "Material UI"],
-        description:
-            "Developed a feature-rich e-commerce web application for purchasing books online. Implemented product listing, advanced filtering, search functionality, and a dynamic cart system. Designed and developed a dedicated admin panel for managing products, categories, users, and orders efficiently. Integrated Cloudinary for optimized image hosting and MySQL for secure data storage. Built a fully responsive and mobile-friendly UI using Material UI and Bootstrap. Added secure payment gateway integration to ensure a seamless checkout process.",
-    },
-    {
-        title: "SEVAKI Web Platform",
-        tech: ["React.js", "JavaScript", "Material UI", "SQL Server", ".NET"],
-        description:
-            "Built a service booking platform that connects customers with professionals. Developed key pages like Landing, Services List, Checkout, and Bookings. Integrated APIs for service booking, payments, and professional management. Managed CRM modules for services, content, and dynamic fields to allow easy scalability. Worked closely with the UI/UX team to deliver a smooth, user-friendly experience.",
-    },
-    {
-        title: "Product Ingestion System",
-        tech: ["React.js", "Spring Boot", "REST APIs", "MySQL"],
-        description:
-            "Developed a vendor-facing platform for uploading, managing, and validating products. Implemented bulk product uploads, dynamic validation rules, and advanced product filtering. Integrated Spring Boot REST APIs for secure and efficient data handling while following MVC architecture. Ensured smooth synchronization between frontend and backend services for real-time product management.",
-    },
-    {
-        title: "Product Log System",
-        tech: ["React.js", "Spring Boot", "REST APIs", "MySQL"],
-        description:
-            "Developed a real-time inventory and transaction tracking system for monitoring stock levels, product movements, and sales analytics. Designed intuitive dashboards to visualize data trends and integrated secure APIs to manage access control. Automated log generation and error reporting to improve operational efficiency.",
-    },
-    {
-        title: "E-Commerce Event Platform",
-        tech: ["React.js", "Spring Boot", "REST APIs", "Bootstrap"],
-        description:
-            "Designed and developed a web-based event management platform for scheduling, registering, and managing events. Implemented user registration, RSVP tracking, and dynamic forms for event creation. Integrated email/SMS notifications to improve user engagement. Optimized performance for large-scale user interactions and concurrent event bookings.",
-    },
+  {
+    title: "Indian Book House",
+    category: "E-Commerce Platform",
+    image:
+      "https://www.shutterstock.com/image-photo/new-york-city-ny-us-600nw-2614830577.jpg",
+  },
+  {
+    title: "SEVAKI Web Platform",
+    category: "Service Management",
+    image:
+      "https://mkshomeservices.com/wp-content/uploads/2024/01/on-demand-home-services-main.jpg",
+  },
+  {
+    title: "Product Ingestion System",
+    category: "Enterprise Tool",
+    image:
+      "https://www.appstudio.ca/blog/wp-content/uploads/2020/06/Enterprise-APP-development-1.jpg",
+  },
+  {
+    title: "Product Log System",
+    category: "Data Tracking",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4kMvocapgUyKmnqa9SHhX2ODqcrzzEsX_VQ&s",
+  },
+  {
+    title: "E-Commerce Event Platform",
+    category: "Web Development",
+    image:
+      "https://img.freepik.com/free-photo/people-taking-part-high-protocol-event_23-2150951243.jpg",
+  },
 ];

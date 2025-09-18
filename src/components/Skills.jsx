@@ -1,64 +1,58 @@
 import React from "react";
-import {
-    Box,
-    Container,
-    Typography,
-    Grid,
-    Card,
-    CardContent,
-    Chip,
-} from "@mui/material";
+import { Card, Typography, Box, Tooltip } from "@mui/material";
+
 import { skills } from "../data/skills";
 
 const Skills = () => {
-    return (
-        <Box sx={{ py: 8, backgroundColor: "#f5f5f5" }}>
-            <Container maxWidth="lg">
-                <Typography
-                    variant="h3"
-                    component="h2"
-                    gutterBottom
-                    sx={{ textAlign: "center", mb: 6, fontWeight: "bold" }}
-                >
-                    Technical Skills
-                </Typography>
-                <Grid container spacing={4}>
-                    {Object.entries(skills).map(([category, skillList]) => (
-                        <Grid item xs={12} md={6} key={category}>
-                            <Card sx={{ height: "100%", boxShadow: 3, "&:hover": { boxShadow: 6 } }}>
-                                <CardContent sx={{ p: 3 }}>
-                                    <Typography
-                                        variant="h5"
-                                        component="h3"
-                                        gutterBottom
-                                        sx={{ fontWeight: "bold", color: "primary.main" }}
-                                    >
-                                        {category}
-                                    </Typography>
-                                    <Box sx={{ display: "flex", flexWrap: "wrap", gap: 1 }}>
-                                        {skillList.map((skill) => (
-                                            <Chip
-                                                key={skill}
-                                                label={skill}
-                                                variant="outlined"
-                                                sx={{
-                                                    "&:hover": {
-                                                        backgroundColor: "primary.light",
-                                                        color: "white",
-                                                    },
-                                                    transition: "all 0.3s ease",
-                                                }}
-                                            />
-                                        ))}
-                                    </Box>
-                                </CardContent>
-                            </Card>
-                        </Grid>
-                    ))}
-                </Grid>
-            </Container>
-        </Box>
-    );
+  return (
+    <Card
+      sx={{
+        p: 3,
+        mb: 3,
+        boxShadow: 6,
+        borderRadius: 3,
+        bgcolor: "background.paper",
+      }}
+    >
+      <Typography variant="h4" gutterBottom color="primary">
+        Skills
+      </Typography>
+
+      <Box
+        sx={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fill, minmax(80px, 1fr))",
+          gap: 3,
+          justifyItems: "center",
+          alignItems: "center",
+        }}
+      >
+        {skills.map((skill, i) => (
+          <Tooltip title={skill.name} key={i} arrow>
+            <Box
+              sx={{
+                p: 1.5,
+                borderRadius: 2,
+                boxShadow: 3,
+                transition: "all 0.3s ease",
+                "&:hover": {
+                  transform: "scale(1.2)",
+                  boxShadow: 6,
+                },
+              }}
+            >
+              <img
+                src={skill.icon}
+                alt={skill.name}
+                className="skill-icon"
+                style={{ width: 50, height: 50 }}
+              />
+            </Box>
+          </Tooltip>
+        ))}
+      </Box>
+    </Card>
+  );
 };
 
 export default Skills;
