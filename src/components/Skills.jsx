@@ -46,6 +46,7 @@ const Skills = () => {
                 alt={skill.name}
                 className="skill-icon"
                 style={{ width: 50, height: 50 }}
+                loading="lazy"
               />
             </Box>
           </Tooltip>

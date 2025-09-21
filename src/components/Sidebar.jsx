@@ -14,6 +14,7 @@ import {
   LocationOn as LocationIcon,
 } from "@mui/icons-material";
 import theme from "../theme";
+
 import avatar from "../assets/avatar.png";
 
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
@@ -82,6 +83,7 @@ const Sidebar = () => {
       {/* Avatar and Name */}
       <Box display="flex" alignItems="center" mb={4}>
         <Avatar src={avatar} sx={{ width: 80, height: 80, borderRadius: 2 }} />
+
         <Box ml={2}>
           <Typography variant="h6">Taraka Ramudu</Typography>
           <Typography variant="body2" color="primary">

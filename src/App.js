@@ -1,5 +1,5 @@
 // src/App.js
-import React, { useState } from "react";
+import React, { Suspense, useState } from "react";
 import {
   Box,
   Drawer,
@@ -8,24 +8,32 @@ import {
   IconButton,
   Container,
   Paper,
+  LinearProgress,
 } from "@mui/material";
 import { Menu as MenuIcon } from "@mui/icons-material";
 
 import theme from "./theme";
 import useResponsive from "./hooks/useResponsive";
-
 import Sidebar from "./components/Sidebar";
 import HeaderTabs from "./components/HeaderTabs";
-import About from "./components/About";
-import Resume from "./components/Resume";
-import Portfolio from "./components/Projects";
-import Skills from "./components/Skills";
 import ScrollTopButton from "./components/ScrollTopButton";
-import Contact from "./components/Contact";
+
 import { skills } from "./data/skills";
 import { education } from "./data/education";
 import { experience } from "./data/experience";
 import { projects } from "./data/projects";
+
+const About = React.lazy(() => import("./components/About"));
+const Resume = React.lazy(() => import("./components/Resume"));
+const Portfolio = React.lazy(() => import("./components/Projects"));
+const Skills = React.lazy(() => import("./components/Skills"));
+const Contact = React.lazy(() => import("./components/Contact"));
+// import About from "./components/About";
+// import Resume from "./components/Resume";
+// import Portfolio from "./components/Projects";
+// import Skills from "./components/Skills";
+// import Contact from "./components/Contact";
+
 const App = () => {
   const [tab, setTab] = useState(0);
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -85,11 +93,21 @@ const App = () => {
         }}
       >
         <HeaderTabs value={tab} handleChange={handleTabChange} />
-        {tab === 0 && <About />}
-        {tab === 1 && <Resume education={education} experience={experience} />}
-        {tab === 2 && <Portfolio projects={projects} />}
-        {tab === 3 && <Skills skills={skills} />}
-        {tab === 4 && <Contact />}
+        <Suspense
+          fallback={
+            <Box sx={{ width: "100%", pt: 5 }}>
+              <LinearProgress color="primary" />
+            </Box>
+          }
+        >
+          {tab === 0 && <About />}
+          {tab === 1 && (
+            <Resume education={education} experience={experience} />
+          )}
+          {tab === 2 && <Portfolio projects={projects} />}
+          {tab === 3 && <Skills skills={skills} />}
+          {tab === 4 && <Contact />}
+        </Suspense>
       </Paper>
 
       <ScrollTopButton />
