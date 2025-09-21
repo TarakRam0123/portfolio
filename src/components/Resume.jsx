@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Typography, Box, Link } from "@mui/material";
+import { Card, Typography, Box, Link, Grid } from "@mui/material";
 import { School as SchoolIcon, Work as WorkIcon } from "@mui/icons-material";
 
 const formatDate = (date) => {

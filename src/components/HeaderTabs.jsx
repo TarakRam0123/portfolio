@@ -36,7 +36,7 @@ const HeaderTabs = ({ value, handleChange }) => {
           }}
         >
           <Tab label="About" />
-          <Tab label="Resume" />
+          <Tab label="Experience" />
           <Tab label="Projects" />
           <Tab label="Skills" />
           <Tab label="Contact" />
